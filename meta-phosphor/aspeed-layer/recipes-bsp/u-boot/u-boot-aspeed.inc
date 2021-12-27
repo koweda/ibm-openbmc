@@ -15,7 +15,10 @@ SRC_URI_append_aspeed_df-isolate-bmc = " \
 SRC_URI_append_aspeed_df-aspeednic-use-mac2 = " \
     file://0002-board-aspeed-aspeednic-Use-MAC2-for-networking.patch \
     "
-
+SRC_URI_append_aspeed_df-aspeed-spi-master = " \
+    file://0006-aspeed-Enable-SPI-master-mode-by-default.patch \
+    "
+    
 do_patch[depends] += "os-release:do_populate_sysroot"
 
 python do_patch_append_aspeed_df-obmc-ubi-fs () {
